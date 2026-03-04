@@ -9,7 +9,7 @@ body {
 }
 .hero {
   position: fixed;
-  height: 70px;
+  height: 36px fixed;
   background-color: white;
   position: fixed;
   width: 100%;
@@ -39,7 +39,7 @@ span {
   margin-left: 25px;
   padding: 8px 16px;
   font-size: 18px;
-  border-radius: 15%;
+  border-radius: 8px;
 }
 .navigation .nav-kontakt {
   background-color: #008236;
@@ -57,7 +57,7 @@ main {
   background-color: azure;
   font-size: 21px;
   inset: 0;
-  padding: 40px;
+  padding: 20px 60px;
   margin: 50px auto;
   box-shadow: 0 0 30px;
   line-height: 1.75;
@@ -76,9 +76,128 @@ hr {
   background-color: grey;
   margin: 20px 0;
 }
-footer {
+/*FORM
+*/
+#kontakt{
+  display: flex;
+  justify-content: center;
+  padding: 80px 100px 20px;
+}
+.form{
+  background-color: #F0FDF4;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px;
+  width: 100%;
+}
+.uhendus{
   text-align: center;
+  margin-bottom: 20px;
+}
+.uhendus p{
+  color: #4A5565;
+  font-size: 18px;
+}
+.nimi{
+  display: flex;
+  justify-content: space-between;
+}
+input{
+  width: 350px;
+  height: 24px;
+  background-color: #fdfdfd;;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/*MEIE PARTNERID
+*/
+.partnerid {
   padding: 20px;
-  background: #444;
-  color: #fff;
+}
+
+.partner-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.partner-list li {
+  flex: 1 1 calc(33.33% - 20px);
+  max-width: calc(33.33% - 20px);
+}
+
+@media (max-width: 900px) {
+  .partner-list li {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 600px) {
+  .partner-list li {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+.partner-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 150px;      /* minimaalne kõrgus */
+  max-height: 200px;      /* maksimaalne kõrgus */
+  padding: 15px;
+
+  background: #FFFFFF;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  text-decoration: none;
+  color: #333;
+  text-align: center;
+
+  transition: 0.2s ease;
+  overflow: hidden;        /* hoiab sisu kasti sees */
+}
+
+.partner-box:hover {
+  background: #e6e6e6;
+  transform: translateY(-3px);
+}
+
+.partner-box .name {
+  font-weight: 600;
+
+  /* automaatne skaleerumine */
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+
+  margin-bottom: 6px;
+  word-break: break-word;
+  text-align: center;
+}
+
+.partner-box .url {
+  color: #008236;
+
+  /* automaatne skaleerumine */
+  font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+
+  white-space: nowrap;       /* URL ei murdu */
+  overflow: hidden;          /* ei lähe kastist välja */
+  text-overflow: ellipsis;   /* näita ... kui liiga pikk */
+  max-width: 100%;
+}
+
+.partnerid-heading {
+  text-align: center;
+  margin-bottom: 30px;
 }
