@@ -9,27 +9,50 @@
   <body>
     <header>
       <div class="hero">
-          <!-- <img
-            class="heroimg"
-            src="Images/"insert pic
-            alt="Keskonnatelk pilt"
-          loading="lazy"
-        /> -->
         <span>Kekkonnatelk</span>
         <nav class="navigation">
+          <a class="nav-elem" href="#missioon">Missioon</a>
           <a class="nav-elem" href="#kalender">Kalender</a>
-            <a class="nav-elem" href="#missioon">Missioon</a>
-          
           <a class="nav-kontakt" href="#kontakt">Kontakt</a>
         </nav>
       </div>
     </header>
 
     <main>
-      <div class="algus">
-
+      <div class="sidebar" id="sidebar">
+        <h2 class="menu-title">Peamenüü</h2>
+        <a href="index.html" class="active">Avaleht</a>
+        <div class="season">
+          <p>Hooajad</p>
+          <button>17. hooaeg <span>2026</span></button>
+          <button>16. hooaeg <span>2025</span></button>
+          <button>15. hooaeg <span>2024</span></button>
+          <button>14. hooaeg <span>2023</span></button>
+          <button>13. hooaeg <span>2022</span></button>
+          <button>12. hooaeg <span>2021</span></button>
+        </div>
       </div>
-      <section id="kalender" class="kalender"> <h2>Kalender</h2> <table class="calendar"> <thead> <tr> <th>E</th> <th>T</th> <th>K</th> <th>N</th> <th>R</th> <th>L</th> <th>P</th> </tr> </thead> <tbody> <tr> <td></td><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td> </tr> <tr> <td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td> </tr> <tr> <td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td> </tr> <tr> <td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td> </tr> <tr> <td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td> </tr> </tbody> </table> </section>
+      <section class="algus" id="home">
+        <div class="algus-content">
+          <h1>Keskkonnatelk</h1>
+          <h3>Avasta Loodus Praktilise Õppimise Kaudu</h3>
+          <p>
+            Harivatad töötoad, kus omandad teadmisi looduse kohta läbi tegevuste
+            ning arendad oskusi ja keskkonnateadlikkust.
+          </p>
+        </div>
+      </section>
+      <!-- <section id="kalender" class="kalender"> <h2>Kalender</h2> <table class="calendar"> <thead> <tr> <th>E</th> <th>T</th> <th>K</th> <th>N</th> <th>R</th> <th>L</th> <th>P</th> </tr> </thead> <tbody> <tr> <td></td><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td> </tr> <tr> <td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td> </tr> <tr> <td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td> </tr> <tr> <td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td> </tr> <tr> <td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td> </tr> </tbody> </table> </section> -->
+      <section class="missioon">
+        <h2>Meie Missioon</h2>
+        <p>Keskkonnatelgis usume kogemuslikku õppimist, mis ühendab inimesi loodusega. 
+          Meie töötoad ühendavad traditsioonilisi käsitööoskusi kaasaegse keskkonnaharidusega, 
+          et inspireerida jätkusuutlikku eluviisi ja keskkonnateadlikkust.</p>
+      </section>
+      <section class="kalenderid" id="kalender">
+        <h2>Külasta Keskkonnatelka</h2>
+        <p>Tule kohale ja osale meie põnevates töötubades järgmistel kuupäevadel</p>
+      </section>
       <div class="about-us">
         <h3>Keskkonnatelgi 17. hooaeg (aastal 2019) on suunatud loodusõppele.</h3>
         <p></div>
@@ -61,96 +84,92 @@
           </ol>
         </div> 
       </div>
+      <div class="partnerid">
+        <div class="partnerid-heading">
+          <h2>Meie Partnerid</h2>
+          <p> Järgmised organisatsioonid ja ettevõtted osalevad sellel aastal keskkonnatelgis</p>
+        </div>
+        <ul class="partner-list">
 
-<div class="partnerid">
-  <div class="partnerid-heading">
-  <h2>Meie Partnerid</h2>
-<p> Järgmised organisatsioonid ja ettevõtted osalevad sellel aastal keskkonnatelgis</p>
-</div>
-  <ul class="partner-list">
+          <li>
+            <a class="partner-box" href="http://www.tormis.ee" target="_blank">
+              <span class="name">MTÜ Veljo Tormise Kultuuriselts</span>
+              <span class="url">www.tormis.ee</span>
+            </a>
+          </li>
 
-    <li>
-      <a class="partner-box" href="http://www.tormis.ee" target="_blank">
-        <span class="name">MTÜ Veljo Tormise Kultuuriselts</span>
-        <span class="url">www.tormis.ee</span>
-      </a>
-    </li>
+          <li>
+            <a class="partner-box" href="http://www.golomb.ee" target="_blank">
+              <span class="name">Samuel Golomb</span>
+              <span class="url">www.golomb.ee</span>
+            </a>
+          </li>
 
-    <li>
-      <a class="partner-box" href="http://www.golomb.ee" target="_blank">
-        <span class="name">Samuel Golomb</span>
-        <span class="url">www.golomb.ee</span>
-      </a>
-    </li>
+          <li>
+            <a class="partner-box" href="https://www.eestipandipakend.ee/" target="_blank">
+              <span class="name">EPP (Eesti Pandipakend OÜ)</span>
+              <span class="url">www.eestipandipakend.ee</span>
+            </a>
+          </li>
 
-    <li>
-      <a class="partner-box" href="https://www.eestipandipakend.ee/" target="_blank">
-        <span class="name">EPP (Eesti Pandipakend OÜ)</span>
-        <span class="url">www.eestipandipakend.ee</span>
-      </a>
-    </li>
+          <li>
+            <a class="partner-box" href="https://www.eto.ee/" target="_blank">
+              <span class="name">MTÜ Eesti Taaskasutusorganisatsioon</span>
+              <span class="url">www.eto.ee</span>
+            </a>
+          </li>
 
-    <li>
-      <a class="partner-box" href="https://www.eto.ee/" target="_blank">
-        <span class="name">MTÜ Eesti Taaskasutusorganisatsioon</span>
-        <span class="url">www.eto.ee</span>
-      </a>
-    </li>
+          <li>
+            <a class="partner-box" href="http://www.kadakas.ee" target="_blank">
+              <span class="name">Tarmo Kadakas</span>
+              <span class="url">www.kadakas.ee</span>
+            </a>
+          </li>
 
-    <li>
-      <a class="partner-box" href="http://www.kadakas.ee" target="_blank">
-        <span class="name">Tarmo Kadakas</span>
-        <span class="url">www.kadakas.ee</span>
-      </a>
-    </li>
+          <li>
+            <a class="partner-box" href="https://okokratt.ee/index.php/et-ee/" target="_blank">
+              <span class="name">Ökokratt</span>
+              <span class="url">okokratt.ee</span>
+            </a>
+          </li>
 
-    <li>
-      <a class="partner-box" href="https://okokratt.ee/index.php/et-ee/" target="_blank">
-        <span class="name">Ökokratt</span>
-        <span class="url">okokratt.ee</span>
-      </a>
-    </li>
+          <li>
+            <a class="partner-box" href="https://www.metsamoisa.ee/" target="_blank">
+              <span class="name">Puhta Vee Teemapark</span>
+              <span class="url">www.metsamoisa.ee</span>
+            </a>
+          </li>
 
-    <li>
-      <a class="partner-box" href="https://www.metsamoisa.ee/" target="_blank">
-        <span class="name">Puhta Vee Teemapark</span>
-        <span class="url">www.metsamoisa.ee</span>
-      </a>
-    </li>
+          <li>
+            <a class="partner-box" href="https://tele2.ee/" target="_blank">
+              <span class="name">Eesti Tele2</span>
+              <span class="url">tele2.ee</span>
+            </a>
+          </li>
 
-    <li>
-      <a class="partner-box" href="https://tele2.ee/" target="_blank">
-        <span class="name">Eesti Tele2</span>
-        <span class="url">tele2.ee</span>
-      </a>
-    </li>
+          <li>
+            <a class="partner-box" href="http://www.miljonmiksi.ee" target="_blank">
+              <span class="name">Miljon Miksi OÜ</span>
+              <span class="url">www.miljonmiksi.ee</span>
+            </a>
+          </li>
 
-    <li>
-      <a class="partner-box" href="http://www.miljonmiksi.ee" target="_blank">
-        <span class="name">Miljon Miksi OÜ</span>
-        <span class="url">www.miljonmiksi.ee</span>
-      </a>
-    </li>
+          <li>
+            <a class="partner-box" href="https://www.ubari.ee/" target="_blank">
+              <span class="name">Ubari Loodustarkuse Keskus</span>
+              <span class="url">www.ubari.ee</span>
+            </a>
+          </li>
 
-    <li>
-      <a class="partner-box" href="https://www.ubari.ee/" target="_blank">
-        <span class="name">Ubari Loodustarkuse Keskus</span>
-        <span class="url">www.ubari.ee</span>
-      </a>
-    </li>
+          <li>
+            <a class="partner-box" href="https://nutiakadeemia.wordpress.com/" target="_blank">
+              <span class="name">NutiAkadeemia</span>
+              <span class="url">nutiakadeemia.wordpress.com</span>
+            </a>
+          </li>
 
-    <li>
-      <a class="partner-box" href="https://nutiakadeemia.wordpress.com/" target="_blank">
-        <span class="name">NutiAkadeemia</span>
-        <span class="url">nutiakadeemia.wordpress.com</span>
-      </a>
-    </li>
-
-  </ul>
-</div>
-
-
-
+        </ul>
+      </div>
       <section id="kontakt">
         <div class="form">
           <div class="form_content">
@@ -179,7 +198,7 @@
               </div>
               <div class="sonum">
                 <h5>Sõnum</h5>
-                <textarea placeholder="Kir"></textarea>
+                <textarea placeholder="Kirjuta oma sõnum"></textarea>
               </div>
               <button type="submit">Saada</button>
             </form>
@@ -188,8 +207,35 @@
       </section>
     </main>
     <footer class="footer">
-      <div class="line">Keskkonnatelk</div>
-      <div class="line">2026</div>
+      <div class="footer-container">
+        <div class="footer-col">
+          <h3>Keskkonnatelk</h3>
+          <p>
+          Anname kogukondadele jõudu loodushariduse
+          ja jätkusuutlike tavade kaudu
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Kiirlingid</h3>
+          <ul>
+            <li>Missioon</li>
+            <li>Kalender</li>
+            <li>Töötoad</li>
+            <li>Teemad</li>
+            <li><a href="#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Kontaktinfo</h3>
+          <p>info@keskkonnatelk.ee</p>
+          <p>+372 XXX XXXX</p>
+          <p>Eesti</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2026 Keskkonnatelk. Kõik õigused kaitstud.
       </div>
     </footer>
   </body>
