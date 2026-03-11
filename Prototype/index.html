@@ -1,242 +1,472 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/Prototype/Styles/styles.css" />
-    <title>Keskkonnatelk</title>
-  </head>
-  <body>
-    <header>
-      <div class="hero">
-        <span>Kekkonnatelk</span>
-        <nav class="navigation">
-          <a class="nav-elem" href="#missioon">Missioon</a>
-          <a class="nav-elem" href="#kalender">Kalender</a>
-          <a class="nav-kontakt" href="#kontakt">Kontakt</a>
-        </nav>
-      </div>
-    </header>
+<html lang="et">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Keskkonnatelk</title>
 
-    <main>
-      <div class="sidebar" id="sidebar">
-        <h2 class="menu-title">Peamenüü</h2>
-        <a href="index.html" class="active">Avaleht</a>
-        <div class="season">
-          <p>Hooajad</p>
-          <button>17. hooaeg <span>2026</span></button>
-          <button>16. hooaeg <span>2025</span></button>
-          <button>15. hooaeg <span>2024</span></button>
-          <button>14. hooaeg <span>2023</span></button>
-          <button>13. hooaeg <span>2022</span></button>
-          <button>12. hooaeg <span>2021</span></button>
+  <!-- styles -->
+  <link rel="stylesheet" href="/Prototype/Styles/styles.css" />
+
+  <!-- lucide icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <i data-lucide="leaf"></i>
+        <span>Keskkonnatelk</span>
+      </a>
+
+      <nav class="nav">
+        <a href="#kalender">Kalender</a>
+        <a href="#missioon">Missioon</a>
+        <a href="#kontakt" class="btn">Kontakt</a>
+      </nav>
+
+      <button class="mobile-menu" aria-label="Open menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar" aria-label="Peamenüü">
+      <h2 class="menu-title">Peamenüü</h2>
+      <a href="index.html" class="sidebar-link active">Avaleht</a>
+
+      <div class="season">
+        <a href="#/season/17" class="sidebar-link" data-path="/season/17">
+          <span>17. hooaeg</span>
+          <span class="muted">2026</span>
+        </a>
+        <a href="#/season/16" class="sidebar-link" data-path="/season/16">
+          <span>16. hooaeg</span>
+          <span class="muted">2025</span>
+        </a>
+        <a href="#/season/15" class="sidebar-link" data-path="/season/15">
+          <span>15. hooaeg</span>
+          <span class="muted">2024</span>
+        </a>
+        <a href="#/season/14" class="sidebar-link" data-path="/season/14">
+          <span>14. hooaeg</span>
+          <span class="muted">2023</span>
+        </a>
+        <a href="#/season/13" class="sidebar-link" data-path="/season/13">
+          <span>13. hooaeg</span>
+          <span class="muted">2022</span>
+        </a>
+        <a href="#/season/12" class="sidebar-link" data-path="/season/12">
+          <span>12. hooaeg</span>
+          <span class="muted">2021</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Hero / Intro -->
+    <section class="algus" id="home">
+      <div class="algus-content">
+        <h1>Keskkonnatelk</h1>
+        <h3>Avasta loodus praktilise õppimise kaudu</h3>
+        <p>
+          Harivad töötoad, kus omandad teadmisi looduse kohta läbi tegevuste ning
+          arendad oskusi ja keskkonnateadlikkust.
+        </p>
+      </div>
+    </section>
+
+    <!-- Missioon -->
+    <section id="missioon" class="section">
+      <div class="container">
+        <div class="center">
+          <h2>Meie Missioon</h2>
+          <p class="sub">Keskkonnatelgis usume kogemuslikku õppimist, mis ühendab inimesi loodusega.</p>
+        </div>
+
+        <div class="grid-three values">
+          <article class="card value">
+            <div class="icon-bg"><i data-lucide="sprout"></i></div>
+            <h3>Meelte Arendamine</h3>
+            <p>Arendame Sinu meeli ja oskusi praktiliste loodusetegevuste kaudu.</p>
+          </article>
+
+          <article class="card value">
+            <div class="icon-bg"><i data-lucide="heart"></i></div>
+            <h3>Jätkusuutlik Eluviis</h3>
+            <p>Õpime keskkonnasõbralikke ja tervislikke käitumisviise igapäevaelus.</p>
+          </article>
+
+          <article class="card value">
+            <div class="icon-bg"><i data-lucide="refresh-cw"></i></div>
+            <h3>Keskkonnasäästlikkus</h3>
+            <p>Mõistame loodusvarade kaitsmise tähtsust.</p>
+          </article>
         </div>
       </div>
-      <section class="algus" id="home">
-        <div class="algus-content">
-          <h1>Keskkonnatelk</h1>
-          <h3>Avasta Loodus Praktilise Õppimise Kaudu</h3>
-          <p>
-            Harivatad töötoad, kus omandad teadmisi looduse kohta läbi tegevuste
-            ning arendad oskusi ja keskkonnateadlikkust.
-          </p>
+    </section>
+
+    <!-- Kalender -->
+    <section id="kalender" class="section bg-white">
+      <div class="container">
+        <div class="center">
+          <div class="icon-bg large"><i data-lucide="calendar"></i></div>
+          <h2>Külasta Keskkonnatelka</h2>
+          <p class="sub">Tule kohale ja osale meie põnevates töötubades järgmistel kuupäevadel</p>
         </div>
-      </section>
-      <!-- <section id="kalender" class="kalender"> <h2>Kalender</h2> <table class="calendar"> <thead> <tr> <th>E</th> <th>T</th> <th>K</th> <th>N</th> <th>R</th> <th>L</th> <th>P</th> </tr> </thead> <tbody> <tr> <td></td><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td> </tr> <tr> <td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td> </tr> <tr> <td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td> </tr> <tr> <td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td> </tr> <tr> <td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td> </tr> </tbody> </table> </section> -->
-      <section class="missioon">
-        <h2>Meie Missioon</h2>
-        <p>Keskkonnatelgis usume kogemuslikku õppimist, mis ühendab inimesi loodusega. 
-          Meie töötoad ühendavad traditsioonilisi käsitööoskusi kaasaegse keskkonnaharidusega, 
-          et inspireerida jätkusuutlikku eluviisi ja keskkonnateadlikkust.</p>
-      </section>
-      <section class="kalenderid" id="kalender">
-        <h2>Külasta Keskkonnatelka</h2>
-        <p>Tule kohale ja osale meie põnevates töötubades järgmistel kuupäevadel</p>
-      </section>
-      <div class="about-us">
-        <h3>Keskkonnatelgi 17. hooaeg (aastal 2019) on suunatud loodusõppele.</h3>
-        <p></div>
-      </div>
-      <div class="kylastatavad">
-        <h1>Keskkonnatelki saab külastada:</h1>
-        <ul>
-          <li>14. juunil Puhta vee teemapark Metsamõisa talu kell 14-19</li>
-          <li>25.-27. juunil Puhta vee teemapark Metsamõisa talu kell 12-16</li>
-          <li>28.-29. juunil Puhta vee teemapark Metsamõisa talu kell 9-12</li>
-          <li>3. augustil Valgejõe külapäeval kell 12-16</li>
-          <li>10. augustil Lauritapäeval (Kuusalu kihelkonna püha) Kuusalu alevikus kell 12-16</li>
-          <li>18. augustil Järsi, Vajangu ja Türje külapäeval kell 12-16</li>
-        </ul>
-        <hr>
-        <div class="organisatsioonid">
-          <ol>
-            <li><a href="http://www.tormis.ee">MTÜ Veljo Tormise Kultuuriselts</a></li>
-            <li><a href="www.golomb.ee">Samuel Golomb</a></li>
-            <li><a href="https://www.eestipandipakend.ee/">EPP (Eesti Pandipakend OÜ)</a></li>
-            <li><a href="https://www.eto.ee/">MTÜ Eesti Taaskasutusorganisatsioon</a></li>
-            <li><a href="www.kadakas.ee">Tarmo Kadakas</a></li>
-            <li><a href="https://okokratt.ee/index.php/et-ee/">Ökokratt</a></li>
-            <li><a href="https://www.metsamoisa.ee/">Puhta Vee Teemapark</a></li>
-            <li><a href="https://tele2.ee/">Eesti Tele2</a></li>
-            <li><a href="www.miljonmiksi.ee">Miljon Miksi OÜ</a></li>
-            <li><a href="https://www.ubari.ee/">Ubari Loodustarkuse Keskus</a></li>
-            <li><a href="https://nutiakadeemia.wordpress.com/">NutiAkadeemia</a></li>
-          </ol>
-        </div> 
-      </div>
-      <div class="partnerid">
-        <div class="partnerid-heading">
-          <h2>Meie Partnerid</h2>
-          <p> Järgmised organisatsioonid ja ettevõtted osalevad sellel aastal keskkonnatelgis</p>
-        </div>
-        <ul class="partner-list">
 
-          <li>
-            <a class="partner-box" href="http://www.tormis.ee" target="_blank">
-              <span class="name">MTÜ Veljo Tormise Kultuuriselts</span>
-              <span class="url">www.tormis.ee</span>
-            </a>
-          </li>
-
-          <li>
-            <a class="partner-box" href="http://www.golomb.ee" target="_blank">
-              <span class="name">Samuel Golomb</span>
-              <span class="url">www.golomb.ee</span>
-            </a>
-          </li>
-
-          <li>
-            <a class="partner-box" href="https://www.eestipandipakend.ee/" target="_blank">
-              <span class="name">EPP (Eesti Pandipakend OÜ)</span>
-              <span class="url">www.eestipandipakend.ee</span>
-            </a>
-          </li>
-
-          <li>
-            <a class="partner-box" href="https://www.eto.ee/" target="_blank">
-              <span class="name">MTÜ Eesti Taaskasutusorganisatsioon</span>
-              <span class="url">www.eto.ee</span>
-            </a>
-          </li>
-
-          <li>
-            <a class="partner-box" href="http://www.kadakas.ee" target="_blank">
-              <span class="name">Tarmo Kadakas</span>
-              <span class="url">www.kadakas.ee</span>
-            </a>
-          </li>
-
-          <li>
-            <a class="partner-box" href="https://okokratt.ee/index.php/et-ee/" target="_blank">
-              <span class="name">Ökokratt</span>
-              <span class="url">okokratt.ee</span>
-            </a>
-          </li>
-
-          <li>
-            <a class="partner-box" href="https://www.metsamoisa.ee/" target="_blank">
-              <span class="name">Puhta Vee Teemapark</span>
-              <span class="url">www.metsamoisa.ee</span>
-            </a>
-          </li>
-
-          <li>
-            <a class="partner-box" href="https://tele2.ee/" target="_blank">
-              <span class="name">Eesti Tele2</span>
-              <span class="url">tele2.ee</span>
-            </a>
-          </li>
-
-          <li>
-            <a class="partner-box" href="http://www.miljonmiksi.ee" target="_blank">
-              <span class="name">Miljon Miksi OÜ</span>
-              <span class="url">www.miljonmiksi.ee</span>
-            </a>
-          </li>
-
-          <li>
-            <a class="partner-box" href="https://www.ubari.ee/" target="_blank">
-              <span class="name">Ubari Loodustarkuse Keskus</span>
-              <span class="url">www.ubari.ee</span>
-            </a>
-          </li>
-
-          <li>
-            <a class="partner-box" href="https://nutiakadeemia.wordpress.com/" target="_blank">
-              <span class="name">NutiAkadeemia</span>
-              <span class="url">nutiakadeemia.wordpress.com</span>
-            </a>
-          </li>
-
-        </ul>
-      </div>
-      <section id="kontakt">
-        <div class="form">
-          <div class="form_content">
-            <div class="uhendus">
-              <h2>Võta Meiega Ühendust</h2>
-              <p>Täida vorm ja me võtame Sinuga peagi ühendust</p>
+        <div class="grid-cards schedule-grid">
+          <!-- Event cards -->
+          <article class="card event">
+            <header class="card-header">
+              <i data-lucide="calendar"></i>
+              <h4>14. juuni</h4>
+            </header>
+            <div class="card-body">
+              <p class="muted"><i data-lucide="map-pin"></i> Puhta Vee Teemapark Metsamõisa Talu</p>
+              <p class="muted"><i data-lucide="clock"></i> 14-19</p>
             </div>
-            <form action="" class="contact_form">
-              <div class="nimi">
-                <div class="eesnimi">
-                  <h5>Eesnimi</h5>
-                  <input type="text">
-                </div>
-                <div class="perenimi">
-                  <h5>Perenimi</h5>
-                  <input type="text">
-                </div>
-              </div>
-              <div class="telefon">
-                <h5>Telefon</h5>
-                <input type="tel" placeholder="+372 XXXX XXXX">
-              </div>
-              <div class="email">
-                <h5>E-post</h5>
-                <input type="email" placeholder="nimi@email.com">
-              </div>
-              <div class="sonum">
-                <h5>Sõnum</h5>
-                <textarea placeholder="Kirjuta oma sõnum"></textarea>
-              </div>
-              <button type="submit">Saada</button>
-            </form>
+          </article>
+
+          <article class="card event">
+            <header class="card-header">
+              <i data-lucide="calendar"></i>
+              <h4>25.-27. juuni</h4>
+            </header>
+            <div class="card-body">
+              <p class="muted"><i data-lucide="map-pin"></i> Puhta Vee Teemapark Metsamõisa Talu</p>
+              <p class="muted"><i data-lucide="clock"></i> 12-16</p>
+            </div>
+          </article>
+
+          <article class="card event">
+            <header class="card-header">
+              <i data-lucide="calendar"></i>
+              <h4>28.-29. juuni</h4>
+            </header>
+            <div class="card-body">
+              <p class="muted"><i data-lucide="map-pin"></i> Puhta Vee Teemapark Metsamõisa Talu</p>
+              <p class="muted"><i data-lucide="clock"></i> 9-12</p>
+            </div>
+          </article>
+
+          <article class="card event">
+            <header class="card-header">
+              <i data-lucide="calendar"></i>
+              <h4>3. august</h4>
+            </header>
+            <div class="card-body">
+              <p class="muted"><i data-lucide="map-pin"></i> Valgejõe Külapäev</p>
+              <p class="muted"><i data-lucide="clock"></i> 12-16</p>
+            </div>
+          </article>
+
+          <article class="card event">
+            <header class="card-header">
+              <i data-lucide="calendar"></i>
+              <h4>10. august</h4>
+            </header>
+            <div class="card-body">
+              <p class="muted"><i data-lucide="map-pin"></i> Lauritsapäev (Kuusalu alevik)</p>
+              <p class="muted"><i data-lucide="clock"></i> 12-16</p>
+            </div>
+          </article>
+
+          <article class="card event">
+            <header class="card-header">
+              <i data-lucide="calendar"></i>
+              <h4>18. august</h4>
+            </header>
+            <div class="card-body">
+              <p class="muted"><i data-lucide="map-pin"></i> Järsi, Vajangu ja Türje Külapäev</p>
+              <p class="muted"><i data-lucide="clock"></i> 12-16</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Workshops -->
+    <section id="tookojad" class="section bg-graded-alt">
+      <div class="container">
+        <div class="center">
+          <h2>Meie Töötoad</h2>
+          <p class="sub">Osale praktilistes tegevustes, mis ühendavad loovust ja keskkonnateadlikkust</p>
+        </div>
+
+        <div class="grid-cards workshops-grid">
+          <article class="card workshop">
+            <div class="image-wrap">
+              <img src="https://images.unsplash.com/photo-1762549957421-179ed3aed898?q=80&w=1080&auto=format&fit=crop" alt="Tuuliku meisterdamine" />
+              <div class="icon-circle"><i data-lucide="wind"></i></div>
+            </div>
+            <div class="card-body">
+              <h4>Tuuliku Meisterdamine</h4>
+              <p>Kavanda ja valmista oma värvikas tuulik.</p>
+            </div>
+          </article>
+
+          <article class="card workshop">
+            <div class="image-wrap">
+              <img src="https://images.unsplash.com/photo-1759142761123-9ab45592b5f6?q=80&w=1080&auto=format&fit=crop" alt="Põletustempel" />
+              <div class="icon-circle"><i data-lucide="feather"></i></div>
+            </div>
+            <div class="card-body">
+              <h4>Põletustempel</h4>
+              <p>Loo ainulaadseid puittemplit traditsiooniliste puupõletustehnikate abil.</p>
+            </div>
+          </article>
+
+          <article class="card workshop">
+            <div class="image-wrap">
+              <img src="https://images.unsplash.com/photo-1656857143191-4ec39c1d4771?q=80&w=1080&auto=format&fit=crop" alt="Looduse Meeleline Kogemine" />
+              <div class="icon-circle"><i data-lucide="eye"></i></div>
+            </div>
+            <div class="card-body">
+              <h4>Looduse Meeleline Kogemine</h4>
+              <p>Testi end looduse kogemisel ja mõistmisel läbi kõigi oma meelte.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Teemad -->
+    <section id="teemad" class="section bg-white">
+      <div class="container">
+        <div class="center">
+          <h2>Õppeteemad</h2>
+          <p class="sub">Meie töötoad integreerivad olulisi keskkonnateemad</p>
+        </div>
+
+        <div class="grid-two topic-grid">
+          <div class="topic">
+            <div class="topic-icon blue"><i data-lucide="waves"></i></div>
+            <div>
+              <h3>Läänemere Kaitse</h3>
+              <p>Õpi hoolitsema Läänemere puhtuse ja ökosüsteemi tervise eest.</p>
+            </div>
+          </div>
+
+          <div class="topic">
+            <div class="topic-icon yellow"><i data-lucide="zap"></i></div>
+            <div>
+              <h3>Energia Säästmine</h3>
+              <p>Avasta praktilisi võimalusi energia säästmiseks igapäevaelus.</p>
+            </div>
+          </div>
+
+          <div class="topic">
+            <div class="topic-icon orange"><i data-lucide="bulb"></i></div>
+            <div>
+              <h3>Alternatiivenergia</h3>
+              <p>Tutvuge taastuvate energiaallikatega ja nende eelistega.</p>
+            </div>
+          </div>
+
+          <div class="topic">
+            <div class="topic-icon green"><i data-lucide="tree-pine"></i></div>
+            <div>
+              <h3>Jätkusuutlik Areng</h3>
+              <p>Mõista, kuidas elada loodusega kooskõlas parema tuleviku nimel.</p>
+            </div>
           </div>
         </div>
-      </section>
-    </main>
-    <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-col">
-          <h3>Keskkonnatelk</h3>
-          <p>
-          Anname kogukondadele jõudu loodushariduse
-          ja jätkusuutlike tavade kaudu
-          </p>
-        </div>
 
-        <div class="footer-col">
-          <h3>Kiirlingid</h3>
-          <ul>
-            <li>Missioon</li>
-            <li>Kalender</li>
-            <li>Töötoad</li>
-            <li>Teemad</li>
-            <li><a href="#kontakt">Kontakt</a></li>
-          </ul>
-        </div>
+        <div class="two-columns">
+          <div>
+            <h3 class="section-subtitle">Keskkonnasõbralik Eluviis</h3>
+            <p class="muted">Meie õppekava rõhutab tervislikke, ökosõbralikke käitumisviise.</p>
+          </div>
 
-        <div class="footer-col">
-          <h3>Kontaktinfo</h3>
-          <p>info@keskkonnatelk.ee</p>
-          <p>+372 XXX XXXX</p>
-          <p>Eesti</p>
+          <div class="image-box">
+            <img src="https://images.unsplash.com/photo-1632688242366-1c1e1d348939?q=80&w=1080&auto=format&fit=crop" alt="Läänemere loodus" />
+          </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        © 2026 Keskkonnatelk. Kõik õigused kaitstud.
+    </section>
+
+    <!-- Partners -->
+    <section class="partnerid">
+      <div class="partnerid-heading">
+        <h2>Meie Partnerid</h2>
+        <p>Järgmised organisatsioonid ja ettevõtted osalevad sellel aastal keskkonnatelgis</p>
       </div>
-    </footer>
-  </body>
+      <ul class="partner-list">
+
+        <li>
+          <a class="partner-box" href="http://www.tormis.ee" target="_blank">
+            <span class="name">MTÜ Veljo Tormise Kultuuriselts</span>
+            <span class="url">www.tormis.ee</span>
+          </a>
+        </li>
+
+        <li>
+          <a class="partner-box" href="http://www.golomb.ee" target="_blank">
+            <span class="name">Samuel Golomb</span>
+            <span class="url">www.golomb.ee</span>
+          </a>
+        </li>
+
+        <li>
+          <a class="partner-box" href="https://www.eestipandipakend.ee/" target="_blank">
+            <span class="name">EPP (Eesti Pandipakend OÜ)</span>
+            <span class="url">www.eestipandipakend.ee</span>
+          </a>
+        </li>
+
+        <li>
+          <a class="partner-box" href="https://www.eto.ee/" target="_blank">
+            <span class="name">MTÜ Eesti Taaskasutusorganisatsioon</span>
+            <span class="url">www.eto.ee</span>
+          </a>
+        </li>
+
+        <li>
+          <a class="partner-box" href="http://www.kadakas.ee" target="_blank">
+            <span class="name">Tarmo Kadakas</span>
+            <span class="url">www.kadakas.ee</span>
+          </a>
+        </li>
+
+        <li>
+          <a class="partner-box" href="https://okokratt.ee/index.php/et-ee/" target="_blank">
+            <span class="name">Ökokratt</span>
+            <span class="url">okokratt.ee</span>
+          </a>
+        </li>
+
+        <li>
+          <a class="partner-box" href="https://www.metsamoisa.ee/" target="_blank">
+            <span class="name">Puhta Vee Teemapark</span>
+            <span class="url">www.metsamoisa.ee</span>
+          </a>
+        </li>
+
+        <li>
+          <a class="partner-box" href="https://tele2.ee/" target="_blank">
+            <span class="name">Eesti Tele2</span>
+            <span class="url">tele2.ee</span>
+          </a>
+        </li>
+
+        <li>
+          <a class="partner-box" href="http://www.miljonmiksi.ee" target="_blank">
+            <span class="name">Miljon Miksi OÜ</span>
+            <span class="url">www.miljonmiksi.ee</span>
+          </a>
+        </li>
+
+        <li>
+          <a class="partner-box" href="https://www.ubari.ee/" target="_blank">
+            <span class="name">Ubari Loodustarkuse Keskus</span>
+            <span class="url">www.ubari.ee</span>
+          </a>
+        </li>
+
+        <li>
+          <a class="partner-box" href="https://nutiakadeemia.wordpress.com/" target="_blank">
+            <span class="name">NutiAkadeemia</span>
+            <span class="url">nutiakadeemia.wordpress.com</span>
+          </a>
+        </li>
+
+      </ul>
+    </section>
+
+    <!-- Kontakt (contact form) -->
+    <section id="kontakt" class="contact-section">
+      <div class="contact-container">
+        <div class="contact-header">
+          <h2>Võta Meiega Ühendust</h2>
+          <p>Täida vorm ja me võtame Sinuga peagi ühendust</p>
+        </div>
+
+        <form class="contact-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="firstName"><i data-lucide="user"></i> Eesnimi</label>
+              <input type="text" id="firstName" placeholder="Sisesta oma eesnimi" required>
+            </div>
+
+            <div class="form-group">
+              <label for="lastName"><i data-lucide="user"></i> Perekonnanimi</label>
+              <input type="text" id="lastName" placeholder="Sisesta oma perekonnanimi" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="phone"><i data-lucide="phone"></i> Telefon</label>
+            <input type="tel" id="phone" placeholder="+372 XXXX XXXX" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email"><i data-lucide="mail"></i> E-post</label>
+            <input type="email" id="email" placeholder="nimi@email.ee" required>
+          </div>
+
+          <div class="form-group">
+            <label for="message"><i data-lucide="message-square"></i> Sõnum</label>
+            <textarea id="message" rows="5" placeholder="Kirjuta oma sõnum siia..."></textarea>
+          </div>
+
+          <button type="submit" class="btn large">Saada Päring</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>Keskkonnatelk</h3>
+        <p>Anname kogukondadele jõudu loodushariduse ja jätkusuutlike tavade kaudu</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Kiirlingid</h3>
+        <ul>
+          <li><a href="#missioon">Missioon</a></li>
+          <li><a href="#kalender">Kalender</a></li>
+          <li><a href="#tookojad">Töötoad</a></li>
+          <li><a href="#teemad">Teemad</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Kontaktinfo</h3>
+        <p>info@keskkonnatelk.ee</p>
+        <p>+372 XXX XXXX</p>
+        <p>Eesti</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">© 2026 Keskkonnatelk. Kõik õigused kaitstud.</div>
+  </footer>
+
+  <!-- lucide icons init -->
+  <script>if (window.lucide) lucide.createIcons();</script>
+
+  <!-- tiny mobile toggle script -->
+  <script>
+    (function () {
+      const btn = document.querySelector('.mobile-menu');
+      const sidebar = document.getElementById('sidebar');
+
+      btn && btn.addEventListener('click', () => {
+        sidebar.classList.toggle('open');
+      });
+
+      // close sidebar when clicking a sidebar link on small screens
+      document.querySelectorAll('.sidebar-link').forEach(a => {
+        a.addEventListener('click', () => {
+          if (window.innerWidth < 768) sidebar.classList.remove('open');
+        });
+      });
+    })();
+  </script>
+</body>
 </html>
